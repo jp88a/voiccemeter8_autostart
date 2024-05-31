@@ -39,5 +39,5 @@ if ($voicemeeterProcess) {
 Add-Type -AssemblyName System.Windows.Forms
 [System.Windows.Forms.MessageBox]::Show(":) Alles Gucci", "Erfolg", [System.Windows.Forms.MessageBoxButtons], [System.Windows.Forms.MessageBoxIcon]::Information)
 # Rückgabewert 0 für Erfolg
-return 0
+
 
