@@ -34,7 +34,7 @@ $audioProcess = Get-Process -Name Audiodg
 
 if ($audioProcess) {
     $audioProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::AboveNormal
-    $audioProcess.ProcessorAffinity = 1
+    $audioProcess.ProcessorAffinity = 2
     start-countdown 10
 } else {
     Write-Host "Der Prozess 'Audiodg.exe' wurde nicht gefunden."
