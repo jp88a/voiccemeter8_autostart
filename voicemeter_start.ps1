@@ -8,7 +8,7 @@ $audioProcess = Get-Process -Name Audiodg
 
 if ($audioProcess) {
     $audioProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::High
-    $audioProcess.ProcessorAffinity = 1
+    $audioProcess.ProcessorAffinity = 2
     Add-Type -AssemblyName System.Windows.Forms
     [System.Windows.Forms.MessageBox]::Show("Audiodg wurde angepasst.", "Info", [System.Windows.Forms.MessageBoxButtons], [System.Windows.Forms.MessageBoxIcon]::Information)
 } else {
@@ -24,7 +24,7 @@ $voicemeeterProcess = Test-ProcessRunning $voicemeeterProcessName
 if ($voicemeeterProcess) {
     # Setze die Priorität und Affinität für "voicemeeter8x64.exe"
     $voicemeeterProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::High
-    $voicemeeterProcess.ProcessorAffinity = 1
+    $voicemeeterProcess.ProcessorAffinity = 2
     Add-Type -AssemblyName System.Windows.Forms
     [System.Windows.Forms.MessageBox]::Show("Voicemeter wurde angepasst.", "Info", [System.Windows.Forms.MessageBoxButtons], [System.Windows.Forms.MessageBoxIcon]::Information)
 } else {
